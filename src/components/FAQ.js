@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -44,14 +45,18 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-24 rounded-[3rem] md:rounded-[4rem] mx-4 md:mx-8 lg:mx-16 my-8 md:my-12" style={{
-      background: 'linear-gradient(to bottom, #2c3e50 0%, #34495e 100%)'
-    }}>
-      {/* Decorative leaves */}
-      <div className="absolute top-8 left-8 w-24 h-24 opacity-30">
-        <svg viewBox="0 0 100 100" className="text-teal-400">
-          <path d="M10 50 Q 30 20, 50 50 T 90 50" fill="currentColor" opacity="0.3"/>
-        </svg>
+    <section className="relative py-16 md:py-24 rounded-[3rem] md:rounded-[4rem] mx-4 md:mx-8 lg:mx-16 my-8 md:my-12 overflow-hidden">
+      {/* Dark Overlay - Base Layer */}
+      <div className="absolute inset-0 z-0 bg-[#313C45]"></div>
+
+      {/* Background Image - On Top of Color */}
+      <div className="absolute inset-0 z-[1]">
+        <Image
+          src="/images/FAQS-bg.png"
+          alt="FAQ background"
+          fill
+          className="object-cover opacity-30"
+        />
       </div>
 
       {/* Content Container */}
@@ -76,23 +81,21 @@ const FAQ = () => {
           </div>
         </div>
 
-        {/* FAQ Grid */}
+        {/* FAQ Grid - 2 Columns */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className={`bg-transparent border-2 border-[#5fb5b9] transition-all duration-300 overflow-hidden rounded-[4rem] ${
-                openIndex === index ? 'md:col-span-2' : ''
-              }`}
+              className="bg-transparent border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-[3rem] md:rounded-[4rem]"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-6 md:px-8 py-5 md:py-6 text-left hover:bg-[#5fb5b9]/10 transition-colors duration-300"
+                className="w-full flex items-center justify-between px-6 md:px-8 py-5 md:py-6 text-left hover:bg-white/5 transition-colors duration-300"
               >
                 <span className="text-white font-roboto-semi-condensed text-sm md:text-base font-medium pr-4">
                   {faq.question}
                 </span>
-                <span className="shrink-0 text-[#5fb5b9] text-2xl md:text-3xl font-light transition-transform duration-300">
+                <span className="shrink-0 text-[#5fb5b9] text-2xl font-light transition-transform duration-300">
                   {openIndex === index ? '−' : '+'}
                 </span>
               </button>

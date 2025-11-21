@@ -31,18 +31,18 @@ const Feedback = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden">
-      {/* Background Image */}
+    <section className="relative py-16 md:py-24 overflow-hidden" style={{
+      background: 'linear-gradient(to bottom, #2c3e50 0%, #34495e 100%)'
+    }}>
+      {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/feedback-bg.png"
           alt="Feedback background"
           fill
-          className="object-cover"
+          className="object-cover opacity-30"
           priority
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content Container */}
@@ -68,11 +68,11 @@ const Feedback = () => {
 
         {/* Feedback Form Box/Modal */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-sm rounded-[3rem] md:rounded-[4rem] shadow-2xl p-8 md:p-12 lg:p-16 border-4 border-[#5fb5b9]">
+          <div className="bg-white/10 backdrop-blur-sm rounded-[3rem] md:rounded-[4rem] shadow-2xl p-8 md:p-12 lg:p-16 border-4 border-[#5fb5b9]">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-gray-700 font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="name" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
                   Your Name *
                 </label>
                 <input
@@ -82,14 +82,14 @@ const Feedback = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
+                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
                   placeholder="Enter your name"
                 />
               </div>
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-gray-700 font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="email" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
                   Your Email *
                 </label>
                 <input
@@ -99,14 +99,14 @@ const Feedback = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
+                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
                   placeholder="Enter your email"
                 />
               </div>
 
               {/* Phone Field */}
               <div>
-                <label htmlFor="phone" className="block text-gray-700 font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="phone" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
                   Phone Number
                 </label>
                 <input
@@ -115,14 +115,14 @@ const Feedback = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
+                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
                   placeholder="Enter your phone number"
                 />
               </div>
 
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-gray-700 font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="message" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
                   Your Message *
                 </label>
                 <textarea
@@ -132,7 +132,7 @@ const Feedback = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-6 py-4 bg-gray-50 border-2 border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 resize-none"
+                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 resize-none"
                   placeholder="Tell us what you think..."
                 ></textarea>
               </div>
