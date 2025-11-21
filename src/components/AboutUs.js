@@ -110,10 +110,10 @@ const AboutUs = () => {
             </div>
 
             {/* Circular Badge Overlay */}
-            <div className="absolute left-[30%] md:left-[30%] top-1/2 -translate-y-1/2 z-20 pointer-events-none">
+            <div className="hidden md:block absolute left-[30%] md:left-[30%] top-1/2 -translate-y-1/2 z-20 pointer-events-none">
               <div className="relative pointer-events-auto">
                 {/* Main Circle Badge with curved text */}
-                <div className="relative w-30 h-30 md:w-36 md:h-36 lg:w-42   lg:h-42 bl  ">
+                <div className="relative w-36 h-36 lg:w-44 lg:h-44">
                   {/* Background Circle */}
                   <div className="absolute inset-0 bg-pink-200 rounded-full shadow-2xl border-[6px] md:border-8 border-white"></div>
 
