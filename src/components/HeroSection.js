@@ -50,9 +50,7 @@ const HeroSection = () => {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 text-center mb-2 leading-tight">
               Take a Schedule Appointment
             </h2>
-            <p className="text-center text-gray-600 font-roboto-semi-condensed mb-1 text-xs md:text-sm">
-              We here to help you 24/7 with experts
-            </p>
+           
             {/* Decorative Underline */}
             <div className="flex justify-center mb-6 md:mb-8">
               <div className="w-12 md:w-16 h-0.5 md:h-1 bg-[#037080] rounded-full"></div>

@@ -206,13 +206,7 @@ const Services = () => {
                     {service.description}
                   </p>
 
-                  {/* Book Now Button */}
-                  <button className="flex items-center gap-2 text-[#037080] font-roboto-semi-condensed font-bold text-sm uppercase tracking-wide hover:gap-3 transition-all duration-300 group">
-                    <span>BOOK NOW</span>
-                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </button>
+                 
                 </div>
               </div>
             ))}
