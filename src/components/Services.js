@@ -87,8 +87,8 @@ const Services = () => {
         <Image
           src="/images/flowers/3.png"
           alt="Decorative flower"
-          width={150}
-          height={150}
+          width={130}
+          height={130}
           className="w-full h-auto object-contain"
         />
       </div>

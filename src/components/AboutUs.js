@@ -11,8 +11,8 @@ const AboutUs = () => {
         <Image
           src="/images/flowers/1.png"
           alt="Decorative flower"
-          width={150}
-          height={150}
+          width={130}
+          height={130}
           className="w-full h-auto object-contain"
           priority
         />
@@ -23,8 +23,8 @@ const AboutUs = () => {
         <Image
           src="/images/flowers/2.png"
           alt="Decorative flower"
-          width={150}
-          height={150}
+          width={130}
+          height={130}
           className="w-full h-auto object-contain"
           priority
         />

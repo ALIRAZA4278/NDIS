@@ -7,12 +7,12 @@ const WhyChooseUs = () => {
     <section className="relative bg-[#F5F5F5] py-16 md:py-24 overflow-hidden">
       {/* Decorative Flower */}
       {/* Bottom Left Flower */}
-      <div className="absolute bottom-0 left-0 w-48 md:w-64 lg:w-80 xl:w-96 z-0 ">
+      <div className="absolute bottom-0 left-0  z-0 ">
         <Image
           src="/images/flowers/4.png"
           alt="Decorative flower"
-          width={150}
-          height={150}
+          width={130}
+          height={130}
           className="w-full h-auto object-contain"
         />
       </div>
