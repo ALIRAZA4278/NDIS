@@ -4,6 +4,7 @@ import AboutUs from '@/components/AboutUs';
 import Services from '@/components/Services';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import FAQ from '@/components/FAQ';
+import Feedback from '@/components/Feedback';
 import Footer from '@/components/layout/Footer';
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <FAQ />
+      <Feedback />
       <Footer />
     </div>
   );

@@ -83,13 +83,13 @@ const Services = () => {
     <section className="relative bg-[#F5F5F5] py-16 md:py-24">
       {/* Decorative Flowers */}
       {/* Bottom Right Flower */}
-      <div className="absolute bottom-0 right-0  z-0 ">
+      <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 z-0">
         <Image
           src="/images/flowers/3.png"
           alt="Decorative flower"
-          width={130}
-          height={130}
-          className="w-full h-auto object-contain"
+          width={200}
+          height={200}
+          className="block w-40 md:w-48 lg:w-56 h-auto"
         />
       </div>
 

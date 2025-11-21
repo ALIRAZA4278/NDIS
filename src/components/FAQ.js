@@ -22,10 +22,6 @@ const FAQ = () => {
       answer: 'Our team is specially trained in adaptive techniques and inclusive care practices. We accommodate various accessibility needs and work with you to ensure a comfortable, dignified experience tailored to your unique requirements.'
     },
     {
-      question: 'What is NDIS Beauty Collective?',
-      answer: 'NDIS Beauty Collective is a mobile hair and beauty service specifically designed for NDIS participants and individuals with disabilities. We bring professional beauty services directly to your home.'
-    },
-    {
       question: 'What areas do you service?',
       answer: 'We provide mobile services across multiple regions. Please contact us to confirm if we service your area and to schedule an appointment.'
     },
@@ -36,6 +32,10 @@ const FAQ = () => {
     {
       question: 'How do I book an appointment?',
       answer: 'You can book an appointment by filling out our online form, calling us directly, or contacting us via email. We\'ll work with you to schedule a convenient time.'
+    },
+    {
+      question: 'What services do you offer?',
+      answer: 'We offer a comprehensive range of mobile hair and beauty services including haircuts, styling, makeup, nail care, and specialized treatments, all tailored to meet the unique needs of NDIS participants.'
     }
   ];
 
@@ -81,22 +81,24 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-transparent border-2 border-[#5fb5b9] rounded-full hover:bg-[#5fb5b9]/10 transition-all duration-300"
+              className={`bg-transparent border-2 border-[#5fb5b9] transition-all duration-300 overflow-hidden rounded-[4rem] ${
+                openIndex === index ? 'md:col-span-2' : ''
+              }`}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-6 md:px-8 py-4 md:py-5 text-left"
+                className="w-full flex items-center justify-between px-6 md:px-8 py-5 md:py-6 text-left hover:bg-[#5fb5b9]/10 transition-colors duration-300"
               >
                 <span className="text-white font-roboto-semi-condensed text-sm md:text-base font-medium pr-4">
                   {faq.question}
                 </span>
-                <span className="flex-shrink-0 text-[#5fb5b9] text-xl md:text-2xl font-bold">
+                <span className="shrink-0 text-[#5fb5b9] text-2xl md:text-3xl font-light transition-transform duration-300">
                   {openIndex === index ? '−' : '+'}
                 </span>
               </button>
 
               {openIndex === index && (
-                <div className="px-6 md:px-8 pb-4 md:pb-5">
+                <div className="px-6 md:px-8 pb-6 pt-2 border-t border-[#5fb5b9]/30">
                   <p className="text-gray-300 font-roboto-semi-condensed text-sm md:text-base leading-relaxed">
                     {faq.answer}
                   </p>

@@ -4,28 +4,28 @@ import Image from 'next/image';
 
 const AboutUs = () => {
   return (
-    <section className="relative bg-[#F5F5F5] py-16 md:py-24 overflow-x-hidden">
+    <section className="relative bg-[#F5F5F5] py-16 md:py-24 overflow-hidden">
       {/* Decorative Flowers - Same Size for Both */}
       {/* Top Left Flower */}
-      <div className="absolute top-0 left-0  z-0 ">
+      <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-0">
         <Image
           src="/images/flowers/1.png"
           alt="Decorative flower"
-          width={130}
-          height={130}
-          className="w-full h-auto object-contain"
+          width={200}
+          height={200}
+          className="block w-40 md:w-48 lg:w-56 h-auto"
           priority
         />
       </div>
 
       {/* Bottom Right Flower - SAME SIZE */}
-      <div className="absolute bottom-0 right-0  z-0">
+      <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 z-0">
         <Image
           src="/images/flowers/2.png"
           alt="Decorative flower"
-          width={130}
-          height={130}
-          className="w-full h-auto object-contain"
+          width={200}
+          height={200}
+          className="block w-40 md:w-48 lg:w-56 h-auto"
           priority
         />
       </div>
@@ -110,7 +110,7 @@ const AboutUs = () => {
             </div>
 
             {/* Circular Badge Overlay */}
-            <div className="absolute top-1/2 left-1/2 md:left-[30%] transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
               <div className="relative">
                 {/* Main Circle Badge with curved text */}
                 <div className="relative w-36 h-36 md:w-44 md:h-44 lg:w-52 lg:h-52">

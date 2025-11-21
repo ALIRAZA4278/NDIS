@@ -20,14 +20,14 @@ const Footer = () => {
   };
 
   const instagramImages = [
-    '/images/instagram/1.jpg',
-    '/images/instagram/2.jpg',
-    '/images/instagram/3.jpg',
-    '/images/instagram/4.jpg',
-    '/images/instagram/5.jpg',
-    '/images/instagram/6.jpg',
-    '/images/instagram/7.jpg',
-    '/images/instagram/8.jpg',
+    '/images/footer/1.png',
+    '/images/footer/2.png',
+    '/images/footer/3.png',
+    '/images/footer/4.png',
+    '/images/footer/5.png',
+    '/images/footer/6.png',
+    '/images/footer/7.png',
+    '/images/footer/8.png',
   ];
 
   return (
