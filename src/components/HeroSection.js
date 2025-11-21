@@ -48,7 +48,7 @@ const HeroSection = () => {
           {/* Right Side - Appointment Form */}
           <div className="bg-white/85 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-2xl p-6 md:p-8 lg:p-10 xl:p-12 w-full max-w-xl mx-auto lg:mx-0 lg:translate-y-20 xl:translate-y-24">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 text-center mb-2 leading-tight">
-              Take a Schedule Appointment
+              Request a call back 
             </h2>
            
             {/* Decorative Underline */}
