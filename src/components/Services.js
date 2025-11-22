@@ -80,16 +80,16 @@ const Services = () => {
   };
 
   return (
-    <section className="relative bg-[#F5F5F5] py-16 md:py-24">
-      {/* Decorative Flowers */}
+    <section className="relative bg-[#F5F5F5] py-16 md:py-24 overflow-hidden">
+      {/* Decorative Flowers - Hidden on Mobile */}
       {/* Bottom Right Flower */}
-      <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 z-0">
+      <div className="hidden md:block absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 z-0">
         <Image
           src="/images/flowers/3.png"
           alt="Decorative flower"
           width={200}
           height={200}
-          className="block w-40 md:w-48 lg:w-56 h-auto"
+          className="w-40 md:w-48 lg:w-56 h-auto opacity-80"
         />
       </div>
 
@@ -153,10 +153,10 @@ const Services = () => {
 
         {/* Services Carousel Container */}
         <div className="relative mb-12">
-          {/* Left Arrow */}
+          {/* Left Arrow - Hidden on Mobile */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 hover:bg-gray-50 -ml-4 md:-ml-6"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg hover:shadow-xl items-center justify-center transition-all duration-300 hover:bg-gray-50 -ml-4 md:-ml-6"
             aria-label="Scroll left"
           >
             <svg className="w-5 h-5 md:w-6 md:h-6 text-[#037080]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,10 +164,10 @@ const Services = () => {
             </svg>
           </button>
 
-          {/* Right Arrow */}
+          {/* Right Arrow - Hidden on Mobile */}
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 hover:bg-gray-50 -mr-4 md:-mr-6"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg hover:shadow-xl items-center justify-center transition-all duration-300 hover:bg-gray-50 -mr-4 md:-mr-6"
             aria-label="Scroll right"
           >
             <svg className="w-5 h-5 md:w-6 md:h-6 text-[#037080]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -178,13 +178,13 @@ const Services = () => {
           {/* Services Scrollable Container */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-2"
+            className="flex gap-4 md:gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-1 md:px-2 snap-x snap-mandatory"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {currentServices.map((service) => (
               <div
                 key={service.id}
-                className="flex-none w-[280px] md:w-[320px] bg-white rounded-3xl overflow-hidden transition-all duration-300 group"
+                className="flex-none w-[260px] md:w-[320px] bg-white rounded-3xl overflow-hidden transition-all duration-300 group snap-center"
               >
                 {/* Service Image */}
                 <div className="relative h-56 md:h-64 overflow-hidden rounded-t-3xl">

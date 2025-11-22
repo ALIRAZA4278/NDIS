@@ -5,15 +5,15 @@ import Image from 'next/image';
 const WhyChooseUs = () => {
   return (
     <section className="relative bg-[#F5F5F5] py-16 md:py-24 overflow-hidden">
-      {/* Decorative Flower */}
+      {/* Decorative Flower - Hidden on Mobile */}
       {/* Bottom Left Flower */}
-      <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 z-0">
+      <div className="hidden md:block absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 z-0">
         <Image
           src="/images/flowers/4.png"
           alt="Decorative flower"
           width={200}
           height={200}
-          className="block w-40 md:w-48 lg:w-56 h-auto"
+          className="w-40 md:w-48 lg:w-56 h-auto opacity-80"
         />
       </div>
 

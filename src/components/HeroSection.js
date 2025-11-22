@@ -4,7 +4,7 @@ import { GiFlowerPot } from 'react-icons/gi';
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[600px] md:min-h-[700px]" style={{
+    <section className="relative w-full min-h-[700px] md:min-h-[750px] lg:min-h-[800px]" style={{
         backgroundImage: "url('/images/hero/hero.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -14,8 +14,8 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16 h-full flex items-center py-12 md:py-16">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16 h-full flex items-center py-16 md:py-20">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
           {/* Left Side - Text Content */}
           <div className="text-white space-y-6 lg:space-y-8">
@@ -46,7 +46,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Appointment Form */}
-          <div className="bg-white/85 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-2xl p-6 md:p-8 lg:p-10 xl:p-12 w-full max-w-xl mx-auto lg:mx-0 lg:translate-y-20 xl:translate-y-24">
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-2xl p-6 md:p-8 lg:p-10 w-full max-w-md mx-auto lg:mx-0">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 text-center mb-2 leading-tight">
               Request a call back 
             </h2>

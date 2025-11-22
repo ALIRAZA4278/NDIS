@@ -5,27 +5,27 @@ import Image from 'next/image';
 const AboutUs = () => {
   return (
     <section className="relative bg-[#F5F5F5] py-16 md:py-24 overflow-hidden">
-      {/* Decorative Flowers - Same Size for Both */}
+      {/* Decorative Flowers - Hidden on Mobile */}
       {/* Top Left Flower */}
-      <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-0">
+      <div className="hidden md:block absolute -top-4 -left-4 md:-top-6 md:-left-6 z-0">
         <Image
           src="/images/flowers/1.png"
           alt="Decorative flower"
           width={200}
           height={200}
-          className="block w-40 md:w-48 lg:w-56 h-auto"
+          className="w-40 md:w-48 lg:w-56 h-auto opacity-80"
           priority
         />
       </div>
 
-      {/* Bottom Right Flower - SAME SIZE */}
-      <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 z-0">
+      {/* Bottom Right Flower */}
+      <div className="hidden md:block absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 z-0">
         <Image
           src="/images/flowers/2.png"
           alt="Decorative flower"
           width={200}
           height={200}
-          className="block w-40 md:w-48 lg:w-56 h-auto"
+          className="w-40 md:w-48 lg:w-56 h-auto opacity-80"
           priority
         />
       </div>
@@ -71,8 +71,8 @@ const AboutUs = () => {
         </div>
 
         {/* Images Grid */}
-        <div className="relative mt-16 max-w-7xl mx-auto px-4 md:px-8">
-          <div className="relative flex flex-col md:flex-row gap-6 items-center justify-center">
+        <div className="relative mt-12 md:mt-16 max-w-7xl mx-auto">
+          <div className="relative flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-center">
             {/* Left Column - Two small images stacked */}
             <div className="flex flex-col gap-6 w-full md:w-auto">
               {/* Top Left Image */}

@@ -78,10 +78,10 @@ const Navbar = () => {
               
             {/* Navigation Links - Desktop Only */}
             <nav className="hidden lg:flex items-center gap-12 md:gap-9 flex-1 ">
-              <a href="#home" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
+              <a href="/" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
                 HOME
               </a>
-              <a href="#about" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
+              <a href="/about" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
                 ABOUT US
               </a>
               <a href="#services" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">

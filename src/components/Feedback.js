@@ -68,11 +68,11 @@ const Feedback = () => {
 
         {/* Feedback Form Box/Modal */}
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-[3rem] md:rounded-[4rem] shadow-2xl p-8 md:p-12 lg:p-16 border-4 border-[#5fb5b9]">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl md:rounded-[3rem] lg:rounded-[4rem] shadow-2xl p-6 md:p-10 lg:p-16 border-2 md:border-4 border-[#5fb5b9]">
+            <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="name" className="block text-white font-roboto-semi-condensed font-semibold mb-2 text-sm md:text-base">
                   Your Name *
                 </label>
                 <input
@@ -82,14 +82,14 @@ const Feedback = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 text-sm md:text-base"
                   placeholder="Enter your name"
                 />
               </div>
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="email" className="block text-white font-roboto-semi-condensed font-semibold mb-2 text-sm md:text-base">
                   Your Email *
                 </label>
                 <input
@@ -99,14 +99,14 @@ const Feedback = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 text-sm md:text-base"
                   placeholder="Enter your email"
                 />
               </div>
 
               {/* Phone Field */}
               <div>
-                <label htmlFor="phone" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="phone" className="block text-white font-roboto-semi-condensed font-semibold mb-2 text-sm md:text-base">
                   Phone Number
                 </label>
                 <input
@@ -115,14 +115,14 @@ const Feedback = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-white border-2 border-white rounded-full focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 text-sm md:text-base"
                   placeholder="Enter your phone number"
                 />
               </div>
 
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-white font-roboto-semi-condensed font-semibold mb-2">
+                <label htmlFor="message" className="block text-white font-roboto-semi-condensed font-semibold mb-2 text-sm md:text-base">
                   Your Message *
                 </label>
                 <textarea
@@ -132,7 +132,7 @@ const Feedback = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-6 py-4 bg-white border-2 border-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 resize-none"
+                  className="w-full px-4 md:px-6 py-3 md:py-4 bg-white border-2 border-white rounded-2xl md:rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#5fb5b9] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 resize-none text-sm md:text-base"
                   placeholder="Tell us what you think..."
                 ></textarea>
               </div>

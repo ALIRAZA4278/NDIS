@@ -45,7 +45,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative py-16 md:py-24 rounded-[3rem] md:rounded-[4rem] mx-4 md:mx-8 lg:mx-16 my-8 md:my-12 overflow-hidden">
+    <section className="relative py-12 md:py-20 lg:py-24 rounded-2xl md:rounded-[3rem] lg:rounded-[4rem] mx-2 md:mx-6 lg:mx-16 my-6 md:my-10 lg:my-12 overflow-hidden">
       {/* Dark Overlay - Base Layer */}
       <div className="absolute inset-0 z-0 bg-[#313C45]"></div>
 
@@ -82,27 +82,27 @@ const FAQ = () => {
         </div>
 
         {/* FAQ Grid - 2 Columns */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-transparent border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-[3rem] md:rounded-[4rem]"
+              className="bg-transparent border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-2xl md:rounded-[3rem] lg:rounded-[4rem]"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-6 md:px-8 py-5 md:py-6 text-left hover:bg-white/5 transition-colors duration-300"
+                className="w-full flex items-center justify-between px-4 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 text-left hover:bg-white/5 transition-colors duration-300"
               >
-                <span className="text-white font-roboto-semi-condensed text-sm md:text-base font-medium pr-4">
+                <span className="text-white font-roboto-semi-condensed text-xs md:text-sm lg:text-base font-medium pr-3 md:pr-4">
                   {faq.question}
                 </span>
-                <span className="shrink-0 text-[#5fb5b9] text-2xl font-light transition-transform duration-300">
+                <span className="shrink-0 text-[#5fb5b9] text-xl md:text-2xl font-light transition-transform duration-300">
                   {openIndex === index ? '−' : '+'}
                 </span>
               </button>
 
               {openIndex === index && (
-                <div className="px-6 md:px-8 pb-6 pt-2 border-t border-[#5fb5b9]/30">
-                  <p className="text-gray-300 font-roboto-semi-condensed text-sm md:text-base leading-relaxed">
+                <div className="px-4 md:px-6 lg:px-8 pb-4 md:pb-6 pt-2 border-t border-[#5fb5b9]/30">
+                  <p className="text-gray-300 font-roboto-semi-condensed text-xs md:text-sm lg:text-base leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
