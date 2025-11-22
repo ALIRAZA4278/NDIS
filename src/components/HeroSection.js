@@ -95,13 +95,10 @@ const HeroSection = () => {
           {/* Right Side - Appointment Form */}
           <div className="bg-white/85 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-xl p-5 md:p-6 lg:p-8 w-full max-w-lg ml-auto lg:mr-0">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 text-center mb-2 leading-tight">
-              Take a Schedule Appointment
+             Request a Call Back
             </h2>
 
-            {/* Subtitle */}
-            <p className="text-center text-gray-700 text-sm md:text-base mb-6 font-roboto-semi-condensed">
-              We here to help you 24/7 with experts
-            </p>
+            
 
             <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
               {/* Name Input */}
