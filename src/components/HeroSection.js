@@ -1,21 +1,68 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { GiFlowerPot } from 'react-icons/gi';
 
 const HeroSection = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const services = [
+    'Hair Trims and Cuts',
+    'Hair Styling and Blow Waves',
+    'Nanoplasty Hair Treatment',
+    'Haircuts for Men and Women',
+    'Curly Hair Care/Cuts',
+    'Up-Dos for Events',
+    'Hair Washing and Blow Drying',
+    'Kids\' Haircuts',
+    'Everyday and Special Occasion Makeup',
+    'Kids\' Hair and Makeup Parties',
+    'Sensory-Friendly Sessions',
+    'Scalp Massages and Hair Treatments',
+    'Personalized Consultations'
+  ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Add your form submission logic here
+    alert('Thank you! We will contact you soon.');
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
+  };
   return (
-    <section className="relative w-full min-h-[700px] md:min-h-[750px] lg:min-h-[800px]" style={{
+  
+    <section className="relative w-screen min-h-[700px] md:min-h-[750px] lg:min-h-[800px]" style={{
         backgroundImage: "url('/images/hero/hero.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16 h-full flex items-center py-16 md:py-20">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16 h-full flex items-end md:items-center py-12 md:py-16">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-end lg:items-center">
 
           {/* Left Side - Text Content */}
           <div className="text-white space-y-6 lg:space-y-8">
@@ -46,23 +93,27 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Appointment Form */}
-          <div className="bg-white/90 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-2xl p-6 md:p-8 lg:p-10 w-full max-w-md mx-auto lg:mx-0">
+          <div className="bg-white/85 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-xl p-5 md:p-6 lg:p-8 w-full max-w-lg ml-auto lg:mr-0">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 text-center mb-2 leading-tight">
-              Request a call back 
+              Take a Schedule Appointment
             </h2>
-           
-            {/* Decorative Underline */}
-            <div className="flex justify-center mb-6 md:mb-8">
-              <div className="w-12 md:w-16 h-0.5 md:h-1 bg-[#037080] rounded-full"></div>
-            </div>
 
-            <form className="space-y-4 md:space-y-5">
+            {/* Subtitle */}
+            <p className="text-center text-gray-700 text-sm md:text-base mb-6 font-roboto-semi-condensed">
+              We here to help you 24/7 with experts
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
               {/* Name Input */}
               <div>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-gray-50 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-700 text-sm placeholder:text-gray-400"
+                  required
+                  className="w-full px-4 md:px-5 py-2.5 md:py-3 bg-white/80 backdrop-blur-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 text-sm placeholder:text-gray-500"
                 />
               </div>
 
@@ -70,36 +121,49 @@ const HeroSection = () => {
               <div>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Email"
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-gray-50 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-700 text-sm placeholder:text-gray-400"
+                  required
+                  className="w-full px-4 md:px-5 py-2.5 md:py-3 bg-white/80 backdrop-blur-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 text-sm placeholder:text-gray-500"
                 />
               </div>
 
               {/* Phone and Services Row */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Phone Input */}
                 <div>
                   <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="Phone Number"
-                    className="w-full px-4 md:px-5 py-3 md:py-4 bg-gray-50 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-700 text-sm placeholder:text-gray-400"
+                    required
+                    className="w-full px-4 py-2.5 md:py-3 bg-white/80 backdrop-blur-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 text-sm placeholder:text-gray-500"
                   />
                 </div>
 
                 {/* Services Dropdown */}
                 <div className="relative">
                   <select
-                    className="w-full px-4 md:px-5 py-3 md:py-4 bg-gray-50 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-500 text-sm appearance-none cursor-pointer"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2.5 md:py-3 bg-white/80 backdrop-blur-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-500 text-sm appearance-none cursor-pointer"
                   >
                     <option value="">Select Services</option>
-                    <option value="hair">Hair Styling</option>
-                    <option value="makeup">Makeup</option>
-                    <option value="nails">Nail Care</option>
-                    <option value="skincare">Skin Care</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>
+                        {service}
+                      </option>
+                    ))}
                   </select>
                   {/* Dropdown Arrow */}
-                  <div className="absolute right-3 md:right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                    <svg className="w-4 md:w-5 h-4 md:h-5 text-[#037080]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                    <svg className="w-4 h-4 text-[#037080]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
@@ -109,9 +173,13 @@ const HeroSection = () => {
               {/* Message Textarea */}
               <div>
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Your Message"
-                  rows="5"
-                  className="w-full px-5 md:px-6 py-3 md:py-4 bg-gray-50 border border-gray-300 rounded-2xl md:rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-700 text-sm resize-none placeholder:text-gray-400"
+                  rows="4"
+                  required
+                  className="w-full px-4 md:px-5 py-2.5 md:py-3 bg-white/80 backdrop-blur-sm border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#037080] focus:border-transparent transition-all font-roboto-semi-condensed text-gray-800 text-sm resize-none placeholder:text-gray-500"
                 ></textarea>
               </div>
 
@@ -119,7 +187,7 @@ const HeroSection = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-xs md:text-sm py-3 md:py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest"
+                  className="w-full bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-xs md:text-sm py-3 md:py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest"
                 >
                   SEND MESSAGE
                 </button>

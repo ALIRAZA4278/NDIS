@@ -41,6 +41,7 @@ const FAQ = () => {
   ];
 
   const toggleFAQ = (index) => {
+    // Only one FAQ can be open at a time
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -82,11 +83,11 @@ const FAQ = () => {
         </div>
 
         {/* FAQ Grid - 2 Columns */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#3A4A52] border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-[2rem] md:rounded-[2.5rem]"
+              className="bg-[#3A4A52] border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-[2rem] md:rounded-[2.5rem] h-auto"
             >
               <button
                 onClick={() => toggleFAQ(index)}

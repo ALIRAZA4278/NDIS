@@ -97,7 +97,7 @@ const Navbar = () => {
 
            <div className='flex '>
 
-              <div className="w-14 h-14 bg-[#037080] rounded-full flex items-center justify-center shrink-0 mr-2">
+              <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 mr-2">
                 <Image src="/images/ICON.png" alt="Contact" width={28} height={28} className="w-7 h-7" />
               </div>
               <div className="flex flex-col mr-8 md:mr-2">

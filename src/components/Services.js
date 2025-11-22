@@ -97,12 +97,16 @@ const Services = () => {
 
   const scroll = (direction) => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 350;
-      const newScrollPosition = direction === 'left'
-        ? scrollContainerRef.current.scrollLeft - scrollAmount
-        : scrollContainerRef.current.scrollLeft + scrollAmount;
+      const container = scrollContainerRef.current;
+      const cardWidth = 280; // Card width
+      const gap = 24; // Gap between cards (md:gap-6 = 24px)
+      const scrollAmount = cardWidth + gap;
 
-      scrollContainerRef.current.scrollTo({
+      const newScrollPosition = direction === 'left'
+        ? container.scrollLeft - scrollAmount
+        : container.scrollLeft + scrollAmount;
+
+      container.scrollTo({
         left: newScrollPosition,
         behavior: 'smooth'
       });
@@ -150,7 +154,12 @@ const Services = () => {
         {/* Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-12">
           <button
-            onClick={() => setActiveTab('hair')}
+            onClick={() => {
+              setActiveTab('hair');
+              if (scrollContainerRef.current) {
+                scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+              }
+            }}
             className={`px-6 md:px-8 py-3 md:py-3.5 rounded-full font-roboto-semi-condensed font-semibold text-sm md:text-base transition-all duration-300 ${
               activeTab === 'hair'
                 ? 'bg-[#037080] text-white shadow-lg'
@@ -160,7 +169,12 @@ const Services = () => {
             Hair Services
           </button>
           <button
-            onClick={() => setActiveTab('makeup')}
+            onClick={() => {
+              setActiveTab('makeup');
+              if (scrollContainerRef.current) {
+                scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+              }
+            }}
             className={`px-6 md:px-8 py-3 md:py-3.5 rounded-full font-roboto-semi-condensed font-semibold text-sm md:text-base transition-all duration-300 ${
               activeTab === 'makeup'
                 ? 'bg-[#037080] text-white shadow-lg'
@@ -170,7 +184,12 @@ const Services = () => {
             Makeup Services
           </button>
           <button
-            onClick={() => setActiveTab('additional')}
+            onClick={() => {
+              setActiveTab('additional');
+              if (scrollContainerRef.current) {
+                scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+              }
+            }}
             className={`px-6 md:px-8 py-3 md:py-3.5 rounded-full font-roboto-semi-condensed font-semibold text-sm md:text-base transition-all duration-300 ${
               activeTab === 'additional'
                 ? 'bg-[#037080] text-white shadow-lg'
@@ -237,18 +256,6 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Pagination Dots */}
-          <div className="flex items-center justify-center gap-2 mt-8">
-            {currentServices.map((_, index) => (
-              <div
-                key={index}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === 0 ? 'w-8 bg-[#037080]' : 'w-2 bg-gray-300'
-                }`}
-              />
             ))}
           </div>
         </div>
