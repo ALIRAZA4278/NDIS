@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState('hair');
@@ -135,18 +136,18 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           {/* Small flower icon with text */}
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-pink-400 text-3xl">🌸</span>
+          <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in-down">
+            <span className="text-pink-400 text-3xl hover:scale-125 hover:rotate-12 transition-transform duration-300">🌸</span>
             <span className="text-[#037080] font-aulletta text-xl md:text-2xl italic">Our Services</span>
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-recoleta text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-recoleta text-gray-800 mb-4 animate-fade-in-up delay-100">
             Our Mobile Hair & Beauty Services
           </h2>
 
           {/* Decorative Underline */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8 animate-slide-in-left delay-200">
             <div className="w-32 md:w-40 h-1 bg-[#037080] rounded-full"></div>
           </div>
         </div>
@@ -262,9 +263,11 @@ const Services = () => {
 
         {/* View All Services Button */}
         <div className="text-center">
-          <button className="bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-sm md:text-base px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-wide">
-            VIEW ALL SERVICES
-          </button>
+          <Link href="/services">
+            <button className="bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-sm md:text-base px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl uppercase tracking-wide">
+              VIEW ALL SERVICES
+            </button>
+          </Link>
         </div>
       </div>
 

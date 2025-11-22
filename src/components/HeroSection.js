@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { GiFlowerPot } from 'react-icons/gi';
+import Link from 'next/link';
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
@@ -35,19 +36,53 @@ const HeroSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
-    alert('Thank you! We will contact you soon.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/api/callback', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you! We will contact you soon.'
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Something went wrong. Please try again.'
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to send message. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return (
   
@@ -67,40 +102,53 @@ const HeroSection = () => {
           {/* Left Side - Text Content */}
           <div className="text-white space-y-6 lg:space-y-8">
             {/* Senior Care Badge */}
-            <div className="flex items-center gap-2">
-              <GiFlowerPot className="text-pink-300 text-xl md:text-2xl" />
+            <div className="flex items-center gap-2 animate-fade-in-down">
+              <GiFlowerPot className="text-pink-300 text-xl md:text-2xl hover:scale-125 hover:rotate-12 transition-transform duration-300" />
               <span className="text-pink-200 text-base md:text-lg italic font-aulletta">Senior Care Is Our Goal</span>
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-recoleta leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-recoleta leading-tight animate-fade-in-up delay-100">
               Welcome to NDIS<br />
               Beauty Collective
             </h1>
 
             {/* Decorative Underline */}
-            <div className="w-24 md:w-32 h-1 bg-pink-200"></div>
+            <div className="w-24 md:w-32 h-1 bg-pink-200 animate-slide-in-left delay-200"></div>
 
             {/* Subheading */}
-            <p className="text-lg md:text-xl lg:text-2xl font-roboto-semi-condensed font-semibold text-white tracking-wide">
+            <p className="text-lg md:text-xl lg:text-2xl font-roboto-semi-condensed font-semibold text-white tracking-wide animate-fade-in-up delay-300">
               MOBILE HAIR AND BEAUTY FOR NDIS CLIENTS
             </p>
 
             {/* CTA Button */}
-            <button className="bg-pink-200 hover:bg-pink-300 text-gray-900 font-roboto-semi-condensed font-bold text-sm md:text-base px-8 md:px-10 py-3 md:py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase">
-              BOOK AN APPOINTMENT
-            </button>
+            <Link href="/contact" className="inline-block animate-scale-in delay-400">
+              <button className="bg-gradient-to-r from-pink-200 to-pink-300 hover:from-pink-300 hover:to-pink-400 text-gray-900 font-roboto-semi-condensed font-bold text-sm md:text-base px-8 md:px-10 py-3 md:py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-105 uppercase">
+                BOOK AN APPOINTMENT
+              </button>
+            </Link>
           </div>
 
           {/* Right Side - Appointment Form */}
-          <div className="bg-white/85 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-xl p-5 md:p-6 lg:p-8 w-full max-w-lg ml-auto lg:mr-0">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 text-center mb-12 leading-tight">
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl md:rounded-[2rem] shadow-2xl hover:shadow-3d p-5 md:p-6 lg:p-8 w-full max-w-lg ml-auto lg:mr-0 animate-fade-in-up delay-200 hover:-translate-y-2 transition-all duration-500">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 text-center mb-12 leading-tight animate-fade-in delay-400">
              Request a Call Back
             </h2>
 
 
 
             <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+              {/* Status Message */}
+              {submitStatus.message && (
+                <div className={`p-3 rounded-lg text-sm ${
+                  submitStatus.type === 'success'
+                    ? 'bg-green-100 text-green-800 border border-green-200'
+                    : 'bg-red-100 text-red-800 border border-red-200'
+                }`}>
+                  {submitStatus.message}
+                </div>
+              )}
+
               {/* Name Input */}
               <div>
                 <input
@@ -184,9 +232,12 @@ const HeroSection = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-xs md:text-sm py-3 md:py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-widest"
+                  disabled={isSubmitting}
+                  className={`w-full bg-gradient-to-r from-[#037080] to-[#3d8a8e] hover:from-[#3d8a8e] hover:to-[#037080] text-white font-roboto-semi-condensed font-bold text-xs md:text-sm py-3 md:py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] uppercase tracking-widest ${
+                    isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
                 >
-                  SEND MESSAGE
+                  {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
                 </button>
               </div>
             </form>

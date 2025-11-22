@@ -10,7 +10,7 @@ const about = () => {
       <div className="bg-white">
         <Navbar />
         <section
-          className="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center"
+          className="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden"
           style={{
             backgroundImage: "url('/images/banners/about.png')",
             backgroundSize: "cover",
@@ -19,10 +19,10 @@ const about = () => {
           }}
         >
           {/* Overlay for better text visibility */}
-          {/* <div className="absolute inset-0 bg-black/20"></div> */}
+          <div className="absolute inset-0 bg-black/30"></div>
 
           {/* Heading */}
-          <h1 className="relative z-10 text-white text-5xl md:text-6xl lg:text-7xl font-bold">
+          <h1 className="relative z-10 text-white text-5xl md:text-6xl lg:text-7xl font-bold font-recoleta animate-scale-in">
             About Us
           </h1>
         </section>
@@ -31,18 +31,18 @@ const about = () => {
         <section className="py-16 px-6 md:px-12 lg:px-24">
           <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
             {/* Text Content */}
-            <div className="flex-1">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                Empowering Beauty, Inclusivity,<br />and Confidence
+            <div className="flex-1 animate-slide-in-left">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-recoleta text-gray-800 leading-tight">
+                Empowering Beauty, Inclusivity,<br />and Con<spam className="font-sans font-medium ">fi</spam>dence
               </h2>
-              <div className="w-24 h-1 bg-teal-500 mt-4"></div>
+              <div className="w-24 h-1 bg-[#5fb5b9] mt-4"></div>
             </div>
 
             {/* Circle Badge */}
-            <div className="flex-shrink-0">
-              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-56 lg:h-56">
+            <div className="flex-shrink-0 animate-slide-in-right delay-200 group">
+              <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-56 lg:h-56 hover:scale-110 transition-all duration-500">
                 {/* Main pink circle */}
-                <div className="absolute inset-0 rounded-full bg-[#F3CCC5]"></div>
+                <div className="absolute inset-0 rounded-full bg-[#F3CCC5] shadow-lg"></div>
 
                 {/* Inner circle with border */}
                 <div className="absolute inset-[25%] rounded-full bg-[#F3CCC5] border-[2.5px] border-[#874D42] flex items-center justify-center">
@@ -62,11 +62,10 @@ const about = () => {
                   </svg>
                 </div>
 
-                {/* Curved Text */}
+                {/* Curved Text - Rotating */}
                 <svg
-                  className="absolute inset-0 w-full h-full"
+                  className="absolute inset-0 w-full h-full animate-rotate"
                   viewBox="0 0 200 200"
-                  style={{ transform: 'rotate(-92deg)' }}
                 >
                   <defs>
                     <path
@@ -89,18 +88,18 @@ const about = () => {
         <section className="py-16 px-6 md:px-12 lg:px-24">
           <div className="max-w-7xl mx-auto">
             {/* Image */}
-            <div className="w-full mb-8">
+            <div className="w-full mb-8 overflow-hidden rounded-lg shadow-2xl scroll-reveal-scale">
               <Image
                 src="/images/about/1.png"
                 alt="NDIS Beauty Collective Mission"
                 width={1200}
                 height={600}
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto hover:scale-105 transition-transform duration-700"
               />
             </div>
 
             {/* Mission Text */}
-            <div className="max-w-4xl">
+            <div className="max-w-4xl scroll-reveal">
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                 NDIS Beauty Collective was created with one powerful mission in mind: to make high-quality beauty services accessible to everyone, especially individuals living with disabilities and NDIS participants. We believe beauty should never come with barriers, which is why we bring professional hair and beauty care straight to your doorstep—removing the stress and limitations of traditional salon visits.
               </p>
@@ -112,8 +111,8 @@ const about = () => {
         <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Founded with Purpose */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <div className="scroll-reveal-left">
+              <h2 className="text-3xl md:text-4xl font-bold font-recoleta text-gray-800 mb-6">
                 Founded with<br />Purpose
               </h2>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
@@ -122,10 +121,10 @@ const about = () => {
             </div>
 
             {/* What We Offer */}
-            <div>
+            <div className="scroll-reveal">
               <div className="mb-4">
-                <span className="text-5xl md:text-6xl font-bold text-gray-800">01</span>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mt-2">What We Offer</h3>
+                <span className="text-5xl md:text-6xl font-bold font-recoleta text-[#037080]">01</span>
+                <h3 className="text-2xl md:text-3xl font-bold font-recoleta text-gray-800 mt-2">What We Offer</h3>
               </div>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 We support both self-managed and plan-managed NDIS participants with personalised services tailored to mobility, sensory, and communication needs. Our trained team ensures every client feels safe, supported, and confident.
@@ -133,10 +132,10 @@ const about = () => {
             </div>
 
             {/* Our Mission */}
-            <div>
+            <div className="scroll-reveal-right">
               <div className="mb-4">
-                <span className="text-5xl md:text-6xl font-bold text-gray-800">02</span>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mt-2">Our Mission</h3>
+                <span className="text-5xl md:text-6xl font-bold font-recoleta text-[#5fb5b9]">02</span>
+                <h3 className="text-2xl md:text-3xl font-bold font-recoleta text-gray-800 mt-2">Our Mission</h3>
               </div>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 To provide equal access to professional beauty services and help every individual feel beautiful in their own skin. With kindness at our core and convenience at your fingertips, NDIS Beauty Collective is redefining what inclusive beauty looks like—one appointment at a time.

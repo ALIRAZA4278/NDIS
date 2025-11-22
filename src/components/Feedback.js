@@ -141,7 +141,7 @@ const Feedback = () => {
               <div className="text-center pt-4">
                 <button
                   type="submit"
-                  className="bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-sm md:text-base px-12 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-wide"
+                  className="bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-sm md:text-base px-12 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl uppercase tracking-wide"
                 >
                   SUBMIT FEEDBACK
                 </button>

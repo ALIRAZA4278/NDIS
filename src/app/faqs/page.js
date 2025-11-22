@@ -2,6 +2,7 @@
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const FaqsPage = () => {
@@ -55,7 +56,7 @@ const FaqsPage = () => {
       <div className="bg-white">
         <Navbar />
         <section
-          className="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center"
+          className="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden"
           style={{
             backgroundImage: "url('/images/banners/about.png')",
             backgroundSize: "cover",
@@ -63,8 +64,9 @@ const FaqsPage = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
+          <div className="absolute inset-0 bg-black/30"></div>
           {/* Heading */}
-          <h1 className="relative z-10 text-white text-5xl md:text-6xl lg:text-7xl font-bold">
+          <h1 className="relative z-10 text-white text-5xl md:text-6xl lg:text-7xl font-bold font-recoleta animate-scale-in">
             FAQs
           </h1>
         </section>
@@ -74,39 +76,50 @@ const FaqsPage = () => {
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <span className="text-pink-400 text-3xl">🌸</span>
-                <span className="text-[#5fb5b9] text-xl md:text-2xl italic">faq</span>
+              <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in-down">
+                <span className="text-pink-400 text-3xl hover:scale-125 hover:rotate-12 transition-transform duration-300">🌸</span>
+                <span className="text-[#5fb5b9] text-xl md:text-2xl italic font-aulletta">faq</span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-recoleta text-gray-800 mb-4 animate-fade-in-up delay-100">
                 Frequently Asked Questions
               </h2>
-              <div className="flex justify-center">
+              <div className="flex justify-center animate-slide-in-left delay-200">
                 <div className="w-32 md:w-40 h-1 bg-[#5fb5b9] rounded-full"></div>
               </div>
             </div>
 
             {/* FAQ Grid */}
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-16">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-16 items-start">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-white border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-3xl"
+                  className={`bg-white border-2 transition-all duration-300 overflow-hidden rounded-3xl hover:-translate-y-1 animate-fade-in-up ${
+                    openIndex === index
+                      ? 'border-[#5fb5b9] shadow-3d-lg'
+                      : 'border-gray-200 hover:border-[#5fb5b9]/50 shadow-3d'
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors duration-300"
+                    className={`w-full flex items-center justify-between px-6 py-5 text-left transition-colors duration-300 ${
+                      openIndex === index ? 'bg-[#5fb5b9]/10' : 'hover:bg-gray-50'
+                    }`}
                   >
-                    <span className="text-gray-800 text-sm md:text-base font-medium pr-4">
+                    <span className={`text-sm md:text-base font-medium pr-4 ${
+                      openIndex === index ? 'text-[#5fb5b9] font-bold' : 'text-gray-800'
+                    }`}>
                       {faq.question}
                     </span>
-                    <span className="shrink-0 text-[#5fb5b9] text-2xl font-light transition-transform duration-300">
+                    <span className={`shrink-0 text-2xl font-light transition-all duration-300 ${
+                      openIndex === index ? 'text-[#5fb5b9] rotate-180' : 'text-gray-400'
+                    }`}>
                       {openIndex === index ? '−' : '+'}
                     </span>
                   </button>
 
                   {openIndex === index && (
-                    <div className="px-6 pb-6 pt-2 border-t border-[#5fb5b9]/30">
+                    <div className="px-6 pb-6 pt-2 border-t border-[#5fb5b9]/30 animate-fade-in">
                       <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                         {faq.answer}
                       </p>
@@ -117,13 +130,15 @@ const FaqsPage = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="text-center">
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6">
+            <div className="text-center scroll-reveal-scale">
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-recoleta text-gray-800 mb-6">
                 Do you have other Questions?
               </h3>
-              <button className="px-8 py-3 bg-[#5fb5b9] text-white font-semibold rounded-full hover:bg-[#4fa5a9] transition-colors duration-300 uppercase text-sm tracking-wide">
-                CONTACT US NOW
-              </button>
+              <Link href="/contact">
+                <button className="px-8 py-3 bg-gradient-to-r from-[#5fb5b9] to-[#4fa5a9] hover:from-[#4fa5a9] hover:to-[#5fb5b9] text-white font-semibold rounded-full transition-all duration-300 uppercase text-sm tracking-wide shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-105">
+                  CONTACT US NOW
+                </button>
+              </Link>
             </div>
           </div>
         </section>

@@ -87,23 +87,31 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#3A4A52] border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-[2rem] md:rounded-[2.5rem] h-auto"
+              className={`bg-gradient-to-br from-[#3A4A52] to-[#313C45] border-2 ${
+                openIndex === index
+                  ? 'border-[#5fb5b9] shadow-3d-lg'
+                  : 'border-gray-600 shadow-3d'
+              } hover:border-[#5fb5b9] transition-all duration-300 overflow-hidden rounded-[2rem] md:rounded-[2.5rem] h-auto hover:shadow-3d-lg hover:-translate-y-1 animate-fade-in-up delay-${index < 4 ? index * 100 : 400}`}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-5 md:px-6 lg:px-8 py-5 md:py-6 text-left hover:bg-white/5 transition-colors duration-300"
+                className="w-full flex items-center justify-between px-5 md:px-6 lg:px-8 py-5 md:py-6 text-left hover:bg-gradient-to-r hover:from-[#5fb5b9]/10 hover:to-transparent transition-all duration-300 group"
               >
-                <span className="text-white text-sm md:text-base font-medium pr-3 md:pr-4">
+                <span className="text-white text-sm md:text-base font-medium pr-3 md:pr-4 group-hover:text-[#5fb5b9] transition-colors duration-300">
                   {faq.question}
                 </span>
-                <span className="shrink-0 text-[#5fb5b9] text-xl md:text-2xl font-light transition-transform duration-300">
+                <span className={`shrink-0 text-2xl md:text-3xl font-light transition-all duration-300 ${
+                  openIndex === index
+                    ? 'text-[#5fb5b9] rotate-180 scale-125'
+                    : 'text-gray-400 group-hover:text-[#5fb5b9] group-hover:scale-110'
+                }`}>
                   {openIndex === index ? '−' : '+'}
                 </span>
               </button>
 
               {openIndex === index && (
-                <div className="px-5 md:px-6 lg:px-8 pb-5 md:pb-6 pt-2 border-t border-[#5fb5b9]/30">
-                  <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                <div className="px-5 md:px-6 lg:px-8 pb-5 md:pb-6 pt-2 border-t border-[#5fb5b9]/50 bg-gradient-to-b from-[#5fb5b9]/5 to-transparent animate-fade-in">
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed animate-fade-in-up delay-100">
                     {faq.answer}
                   </p>
                 </div>

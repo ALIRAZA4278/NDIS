@@ -7,12 +7,46 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = async (e) => {
     e.preventDefault();
-    // Handle subscription logic here
-    console.log('Subscribed:', email);
-    setEmail('');
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Successfully subscribed! Check your email.'
+        });
+        setEmail('');
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Something went wrong. Please try again.'
+        });
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to subscribe. Please try again later.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToTop = () => {
@@ -109,6 +143,17 @@ const Footer = () => {
 
             {/* Newsletter Form */}
             <form onSubmit={handleSubscribe} className="space-y-4">
+              {/* Status Message */}
+              {submitStatus.message && (
+                <div className={`p-3 rounded-lg text-xs ${
+                  submitStatus.type === 'success'
+                    ? 'bg-green-100 text-green-800 border border-green-200'
+                    : 'bg-red-100 text-red-800 border border-red-200'
+                }`}>
+                  {submitStatus.message}
+                </div>
+              )}
+
               <input
                 type="email"
                 value={email}
@@ -119,9 +164,12 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-[#5fb5b9] hover:bg-[#4a9b9f] text-white font-roboto-semi-condensed font-bold text-sm py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-wide"
+                disabled={isSubmitting}
+                className={`w-full bg-[#5fb5b9] hover:bg-[#4a9b9f] text-white font-roboto-semi-condensed font-bold text-sm py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl uppercase tracking-wide ${
+                  isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                }`}
               >
-                SUBSCRIBE
+                {isSubmitting ? 'SUBSCRIBING...' : 'SUBSCRIBE'}
               </button>
             </form>
 
@@ -201,7 +249,7 @@ const Footer = () => {
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-[#5fb5b9] hover:bg-[#4a9b9f] text-white rounded-full shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 z-50"
+        className="fixed bottom-8 right-8 w-12 h-12 bg-[#5fb5b9] hover:bg-[#4a9b9f] text-white rounded-full shadow-lg hover:shadow-2xl flex items-center justify-center transition-all duration-300 z-50"
         aria-label="Scroll to top"
       >
         <FaArrowUp className="text-lg" />

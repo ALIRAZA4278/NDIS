@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaTwitter, FaPinterestP, FaLinkedinIn, FaTimes, FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -79,20 +81,25 @@ const Navbar = () => {
 
             {/* Navigation Links - Desktop Only */}
             <nav className="hidden lg:flex items-center gap-12 md:gap-9 flex-1 ">
-              <Link href="/" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
+              <Link href="/" className={`relative text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide group ${pathname === '/' ? 'text-[#037080]' : ''}`}>
                 HOME
+                <span className={`absolute left-0 -bottom-1 h-[3px] bg-[#037080] transition-all duration-300 ${pathname === '/' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
-              <Link href="/about" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
+              <Link href="/about" className={`relative text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide group ${pathname === '/about' ? 'text-[#037080]' : ''}`}>
                 ABOUT US
+                <span className={`absolute left-0 -bottom-1 h-[3px] bg-[#037080] transition-all duration-300 ${pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
-              <Link href="/services" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
+              <Link href="/services" className={`relative text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide group ${pathname === '/services' ? 'text-[#037080]' : ''}`}>
                 SERVICES
+                <span className={`absolute left-0 -bottom-1 h-[3px] bg-[#037080] transition-all duration-300 ${pathname === '/services' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
-              <Link href="/faqs" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
+              <Link href="/faqs" className={`relative text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide group ${pathname === '/faqs' ? 'text-[#037080]' : ''}`}>
                 FAQS
+                <span className={`absolute left-0 -bottom-1 h-[3px] bg-[#037080] transition-all duration-300 ${pathname === '/faqs' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
-              <Link href="/contact" className="text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide">
+              <Link href="/contact" className={`relative text-[#2c3e50] font-roboto-semi-condensed font-bold text-[15px] hover:text-[#037080] transition-colors tracking-wide group ${pathname === '/contact' ? 'text-[#037080]' : ''}`}>
                 CONTACT
+                <span className={`absolute left-0 -bottom-1 h-[3px] bg-[#037080] transition-all duration-300 ${pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
               </Link>
 
            <div className='flex '>

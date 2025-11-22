@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const WhyChooseUs = () => {
   return (
@@ -22,43 +23,47 @@ const WhyChooseUs = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           {/* Small flower icon with text */}
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="text-pink-400 text-3xl">🌸</span>
+          <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in-down">
+            <span className="text-pink-400 text-3xl hover:scale-125 hover:rotate-12 transition-transform duration-300">🌸</span>
             <span className="text-[#037080] font-aulletta text-xl md:text-2xl italic">Why Choose Us</span>
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-recoleta text-gray-800 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-recoleta text-gray-800 mb-4 animate-fade-in-up delay-100">
             Why Choose Us?
           </h2>
 
           {/* Decorative Underline */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8 animate-slide-in-left delay-200">
             <div className="w-32 md:w-40 h-1 bg-[#037080] rounded-full"></div>
           </div>
         </div>
 
         {/* Why Choose Us Image */}
-        <div className="w-full max-w-6xl mx-auto mb-12">
-          <Image
-            src="/images/whyChooseUS.png"
-            alt="Why Choose Us - NDIS Beauty Collective"
-            width={1464}
-            height={769}
-            className="w-full h-auto"
-            priority
-          />
+        <div className="w-full max-w-6xl mx-auto mb-12 scroll-reveal-scale">
+          <div className="overflow-hidden">
+            <Image
+              src="/images/whyChooseUS.png"
+              alt="Why Choose Us - NDIS Beauty Collective"
+              width={1464}
+              height={769}
+              className="w-full h-auto "
+              priority
+            />
+          </div>
         </div>
 
         {/* Bottom Text and Button */}
-        <div className="text-center">
+        <div className="text-center scroll-reveal">
           <p className="text-gray-700 text-base md:text-lg font-roboto-semi-condensed mb-8 max-w-4xl mx-auto">
             Book your appointment today and experience beauty care that celebrates you!
           </p>
 
-          <button className="bg-[#037080] hover:bg-[#3d8a8e] text-white font-roboto-semi-condensed font-bold text-sm md:text-base px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl uppercase tracking-wide">
-            CONTACT US NOW!
-          </button>
+          <Link href="/contact">
+            <button className="bg-gradient-to-r from-[#037080] to-[#3d8a8e] hover:from-[#3d8a8e] hover:to-[#037080] text-white font-roboto-semi-condensed font-bold text-sm md:text-base px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:-translate-y-1 hover:scale-105 uppercase tracking-wide">
+              CONTACT US NOW!
+            </button>
+          </Link>
         </div>
 
       </div>
