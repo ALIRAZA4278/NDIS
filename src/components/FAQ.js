@@ -86,13 +86,13 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-transparent border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-2xl md:rounded-[3rem] lg:rounded-[4rem]"
+              className="bg-[#3A4A52] border-2 border-[#5fb5b9] hover:border-[#5fb5b9]/80 transition-all duration-300 overflow-hidden rounded-[2rem] md:rounded-[2.5rem]"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between px-4 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 text-left hover:bg-white/5 transition-colors duration-300"
+                className="w-full flex items-center justify-between px-5 md:px-6 lg:px-8 py-5 md:py-6 text-left hover:bg-white/5 transition-colors duration-300"
               >
-                <span className="text-white font-roboto-semi-condensed text-xs md:text-sm lg:text-base font-medium pr-3 md:pr-4">
+                <span className="text-white text-sm md:text-base font-medium pr-3 md:pr-4">
                   {faq.question}
                 </span>
                 <span className="shrink-0 text-[#5fb5b9] text-xl md:text-2xl font-light transition-transform duration-300">
@@ -101,8 +101,8 @@ const FAQ = () => {
               </button>
 
               {openIndex === index && (
-                <div className="px-4 md:px-6 lg:px-8 pb-4 md:pb-6 pt-2 border-t border-[#5fb5b9]/30">
-                  <p className="text-gray-300 font-roboto-semi-condensed text-xs md:text-sm lg:text-base leading-relaxed">
+                <div className="px-5 md:px-6 lg:px-8 pb-5 md:pb-6 pt-2 border-t border-[#5fb5b9]/30">
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

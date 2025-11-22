@@ -28,37 +28,67 @@ const Services = () => {
       },
       {
         id: 4,
-        title: 'Curly Hair Care & Cuts',
-        description: 'End-of-life care ensures comfort and individuals dignity in the final days.',
-        image: '/images/services/4.png'
+        title: 'Haircuts for Men and Women',
+        description: 'Gender-inclusive, precision haircuts tailored to your style and accessibility needs.',
+        image: '/images/services/4.png' 
+      },
+      {
+        id: 5,
+        title: 'Curly Hair Care/Cuts',
+        description: 'Specialized cuts and care for curly and textured hair, celebrating your natural beauty.',
+        image: '/images/services/5.png'
+      },
+      {
+        id: 6,
+        title: 'Up-Dos for Events',
+        description: 'Elegant hairstyles for weddings, formals, or celebrations, designed with your comfort in mind.',
+        image: '/images/services/6.png'
+      },
+      {
+        id: 7,
+        title: 'Hair Washing and Blow Drying',
+        description: 'Gentle, relaxing hair washing and styling for a refreshed look.',
+        image: '/images/services/7.png'
+      },
+      {
+        id: 8,
+        title: 'Kids\' Haircuts',
+        description: 'Fun, stress-free haircuts for children with disabilities, ensuring a positive experience.',
+        image: '/images/services/8.png'
       }
     ],
     makeup: [
       {
         id: 1,
-        title: 'Special Event Makeup',
-        description: 'Professional makeup for weddings, parties, and special occasions.',
-        image: '/images/services/1.png'
+        title: 'Everyday and Special Occasion Makeup',
+        description: 'Natural or bold looks tailored to your preferences, using high-quality, skin-friendly products.',
+        image: '/images/services/9.png'
       },
       {
         id: 2,
-        title: 'Natural Look Makeup',
-        description: 'Everyday makeup that enhances your natural beauty.',
-        image: '/images/services/2.png'
+        title: 'Kids\' Hair and Makeup Parties',
+        description: 'Fun, inclusive beauty parties for children, perfect for birthdays or special events.',
+        image: '/images/services/10.png'
       }
     ],
     additional: [
       {
         id: 1,
-        title: 'Nail Care Services',
-        description: 'Complete nail care including manicures and pedicures.',
-        image: '/images/services/3.png'
+        title: 'Sensory-Friendly Sessions',
+        description: 'Low-stimulation appointments with minimal noise.',
+        image: '/images/services/11.png'
       },
       {
         id: 2,
-        title: 'Skincare Treatments',
-        description: 'Professional skincare treatments for healthy, glowing skin.',
-        image: '/images/services/4.png'
+        title: 'Scalp Massages and Hair Treatments',
+        description: 'Relaxing treatments to nourish hair and promote relaxation.',
+        image: '/images/services/12.png'
+      },
+      {
+        id: 3,
+        title: 'Personalized Consultations',
+        description: 'Customized beauty plans to meet your unique needs and preferences.',
+        image: '/images/services/13.png'
       }
     ]
   };
@@ -184,29 +214,27 @@ const Services = () => {
             {currentServices.map((service) => (
               <div
                 key={service.id}
-                className="flex-none w-[260px] md:w-[320px] bg-white rounded-3xl overflow-hidden transition-all duration-300 group snap-center"
+                className="flex-none w-[280px] bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 snap-center"
               >
                 {/* Service Image */}
-                <div className="relative h-56 md:h-64 overflow-hidden rounded-t-3xl">
+                <div className="relative h-48">
                   <Image
                     src={service.image}
                     alt={service.title}
                     width={400}
-                    height={400}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    height={300}
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
                 {/* Service Content */}
-                <div className="p-5 md:p-6">
-                  <h3 className="text-lg md:text-xl font-bold font-recoleta text-[#037080] mb-3">
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-[#40929E] mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 font-roboto-semi-condensed text-sm leading-relaxed mb-6">
+                  <p className="text-gray-600 text-sm">
                     {service.description}
                   </p>
-
-                 
                 </div>
               </div>
             ))}
