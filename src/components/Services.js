@@ -120,7 +120,7 @@ const Services = () => {
       {/* Bottom Right Flower */}
       <div className="hidden md:block absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 z-0">
         <Image
-          src="/images/flowers/3.png"
+          src="/images/flowers/2.png"
           alt="Decorative flower"
           width={200}
           height={200}

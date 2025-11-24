@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
       {/* Bottom Left Flower */}
       <div className="hidden md:block absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 z-0">
         <Image
-          src="/images/flowers/4.png"
+          src="/images/flowers/1.png"
           alt="Decorative flower"
           width={200}
           height={200}
