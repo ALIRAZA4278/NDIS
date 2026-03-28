@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { GiFlowerPot } from 'react-icons/gi';
 import Link from 'next/link';
 
 const HeroSection = () => {
@@ -20,7 +19,6 @@ const HeroSection = () => {
     'Curly Hair Care/Cuts',
     'Up-Dos for Events',
     'Hair Washing and Blow Drying',
-    'Kids\' Haircuts',
     'Everyday and Special Occasion Makeup',
     'Kids\' Hair and Makeup Parties',
     'Sensory-Friendly Sessions',
@@ -101,16 +99,11 @@ const HeroSection = () => {
 
           {/* Left Side - Text Content */}
           <div className="text-white space-y-6 lg:space-y-8">
-            {/* Senior Care Badge */}
-            <div className="flex items-center gap-2 animate-fade-in-down">
-              <GiFlowerPot className="text-pink-300 text-xl md:text-2xl hover:scale-125 hover:rotate-12 transition-transform duration-300" />
-              <span className="text-pink-200 text-base md:text-lg italic font-aulletta">Senior Care Is Our Goal</span>
-            </div>
-
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-recoleta leading-tight animate-fade-in-up delay-100">
-              Welcome to NDIS<br />
-              Beauty Collective
+              Welcome to the<br />
+              NDIS Beauty<br />
+              Collective
             </h1>
 
             {/* Decorative Underline */}
@@ -118,7 +111,7 @@ const HeroSection = () => {
 
             {/* Subheading */}
             <p className="text-lg md:text-xl lg:text-2xl font-roboto-semi-condensed font-semibold text-white tracking-wide animate-fade-in-up delay-300">
-              MOBILE HAIR AND BEAUTY FOR NDIS CLIENTS
+              MOBILE HAIR AND BEAUTY FOR NDIS PARTICIPANTS
             </p>
 
             {/* CTA Button */}

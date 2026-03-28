@@ -7,9 +7,9 @@ const StatsCounter = () => {
   const sectionRef = useRef(null);
 
   const finalValues = {
-    experience: 35,
-    clients: 22000,
-    centers: 220
+    experience: 15,
+    clients: 20000,
+    centers: 100
   };
 
   useEffect(() => {

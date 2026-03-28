@@ -99,7 +99,7 @@ const about = () => {
             </div>
 
             {/* Mission Text */}
-            <div className="max-w-4xl scroll-reveal">
+            <div className="max-w-4xl mx-auto text-center bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm scroll-reveal">
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
                 NDIS Beauty Collective was created with one powerful mission in mind: to make high-quality beauty services accessible to everyone, especially individuals living with disabilities and NDIS participants. We believe beauty should never come with barriers, which is why we bring professional hair and beauty care straight to your doorstep—removing the stress and limitations of traditional salon visits.
               </p>
@@ -108,35 +108,38 @@ const about = () => {
         </section>
 
         {/* Founded with Purpose Section */}
-        <section className="py-16 px-6 md:px-12 lg:px-24 bg-white">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <section className="py-16 px-6 md:px-12 lg:px-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Founded with Purpose */}
-            <div className="scroll-reveal-left">
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300 border-t-4 border-[#037080] scroll-reveal-left">
               <h2 className="text-3xl md:text-4xl font-bold font-recoleta text-gray-800 mb-6">
                 Founded with<br />Purpose
               </h2>
+              <div className="w-16 h-1 bg-[#037080] mb-6"></div>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Our founder, Jay Jay, recognized a gap in the beauty industry—where comfort, accessibility, and inclusivity were often overlooked. With a vision rooted in compassion and empowerment, NDIS Beauty Collective was born to serve the unique needs of people of all abilities. From precision haircuts and glamorous styling to sensory-friendly appointments and child-focused services, everything we do is guided by care, understanding, and respect.
               </p>
             </div>
 
             {/* What We Offer */}
-            <div className="scroll-reveal">
+            <div className="bg-[#037080] rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300 scroll-reveal">
               <div className="mb-4">
-                <span className="text-5xl md:text-6xl font-bold font-recoleta text-[#037080]">01</span>
-                <h3 className="text-2xl md:text-3xl font-bold font-recoleta text-gray-800 mt-2">What We Offer</h3>
+                <span className="text-5xl md:text-6xl font-bold font-recoleta text-white/30">01</span>
+                <h3 className="text-2xl md:text-3xl font-bold font-recoleta text-white mt-2">What We Offer</h3>
               </div>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              <div className="w-16 h-1 bg-white/40 mb-6"></div>
+              <p className="text-white/90 text-sm md:text-base leading-relaxed">
                 We support both self-managed and plan-managed NDIS participants with personalised services tailored to mobility, sensory, and communication needs. Our trained team ensures every client feels safe, supported, and confident.
               </p>
             </div>
 
             {/* Our Mission */}
-            <div className="scroll-reveal-right">
+            <div className="bg-white rounded-2xl p-8 md:p-10 shadow-sm hover:shadow-lg transition-shadow duration-300 border-t-4 border-[#5fb5b9] scroll-reveal-right">
               <div className="mb-4">
-                <span className="text-5xl md:text-6xl font-bold font-recoleta text-[#5fb5b9]">02</span>
+                <span className="text-5xl md:text-6xl font-bold font-recoleta text-[#5fb5b9]/30">02</span>
                 <h3 className="text-2xl md:text-3xl font-bold font-recoleta text-gray-800 mt-2">Our Mission</h3>
               </div>
+              <div className="w-16 h-1 bg-[#5fb5b9] mb-6"></div>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 To provide equal access to professional beauty services and help every individual feel beautiful in their own skin. With kindness at our core and convenience at your fingertips, NDIS Beauty Collective is redefining what inclusive beauty looks like—one appointment at a time.
               </p>

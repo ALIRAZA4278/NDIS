@@ -114,7 +114,7 @@ const ContactPage = () => {
                   Get In Touch
                 </h2>
                 <p className="text-gray-600 text-base">
-                  We think your skin should look and refshed matter Nourish your outer inner beauty with our essential
+                  Reach out to us below and one of our friendly team members will help guide you through whatever you need!
                 </p>
               </div>
 
@@ -213,22 +213,22 @@ const ContactPage = () => {
               </div>
 
               {/* Contact Information */}
-              <div className="space-y-3">
-                <div className="border-b border-gray-200 pb-3">
-                  <p className="text-sm text-gray-600 mb-1">ADDRESS :</p>
-                  <p className="text-gray-700">Melbourne and surrounding suburbs</p>
+              <div className="space-y-4">
+                <div className="border-b border-gray-200 pb-4">
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Address</p>
+                  <p className="text-base text-gray-800">Melbourne and surrounding suburbs</p>
                 </div>
 
-                <div className="border-b border-gray-200 pb-3">
-                  <p className="text-sm text-gray-600 mb-1">EMAIL :</p>
-                  <p className="text-gray-700">admin@ndisbeautycollective.com.au</p>
+                <div className="border-b border-gray-200 pb-4">
+                  <p className="text-xs uppercase tracking-wider text-gray-500 mb-1">Email</p>
+                  <p className="text-base text-gray-800">admin@ndisbeautycollective.com.au</p>
                 </div>
 
                 <div className="flex items-center gap-3 pt-2">
-                  <svg className="w-10 h-10 text-[#5fb5b9]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h1v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-2v8h1c1.66 0 3-1.34 3-3v-7c0-4.97-4.03-9-9-9z"/>
+                  <svg className="w-8 h-8 text-[#5fb5b9] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <p className="text-3xl md:text-4xl font-bold text-gray-800">+61 404 550 851</p>
+                  <p className="text-xl md:text-2xl font-bold text-gray-800">+61 404 550 851</p>
                 </div>
               </div>
             </div>

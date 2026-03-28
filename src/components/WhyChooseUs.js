@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
         {/* Bottom Text and Button */}
         <div className="text-center scroll-reveal">
           <p className="text-gray-700 text-base md:text-lg font-roboto-semi-condensed mb-8 max-w-4xl mx-auto">
-            Book your appointment today and experience beauty care that celebrates you!
+            Book your appointment today and experience care that celebrates you!
           </p>
 
           <Link href="/contact">

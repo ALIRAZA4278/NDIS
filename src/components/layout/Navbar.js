@@ -105,7 +105,9 @@ const Navbar = () => {
            <div className='flex '>
 
               <div className="w-14 h-14 rounded-full flex items-center justify-center shrink-0 mr-1">
-                <Image src="/images/ICON.png" alt="Contact" width={28} height={28} className="w-7 h-7" />
+                <svg className="w-7 h-7 text-[#037080]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
               </div>
               <div className="flex flex-col mr-8 md:mr-2">
                 <span className="text-[#037080] text-[11px] font-roboto-semi-condensed uppercase tracking-wider">CALL US ANYTIME:</span>
@@ -194,7 +196,9 @@ const Navbar = () => {
           <div className="mt-auto p-6 bg-gray-50 shrink-0">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12  rounded-full flex items-center justify-center shrink-0">
-                <Image src="/images/ICON.png" alt="Contact" width={28} height={28} className="w-8 h-8" />
+                <svg className="w-8 h-8 text-[#037080]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
               </div>
               <div className="flex flex-col">
                 <span className="text-[#037080] text-[10px] font-roboto-semi-condensed uppercase tracking-wider">CALL US ANYTIME:</span>

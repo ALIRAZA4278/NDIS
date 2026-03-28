@@ -81,7 +81,7 @@ const AboutUs = () => {
               {/* Top Left Image */}
               <div className="rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 scroll-reveal-left">
                 <Image
-                  src="/images/home-about/1.png"
+                  src="/images/home-about/3.png"
                   alt="Beauty service"
                   width={320}
                   height={240}
@@ -104,7 +104,7 @@ const AboutUs = () => {
             {/* Right Column - One large image */}
             <div className="rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 w-full md:w-auto scroll-reveal-right">
               <Image
-                src="/images/home-about/3.png"
+                src="/images/home-about/1.png"
                 alt="Beauty service"
                 width={600}
                 height={500}

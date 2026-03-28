@@ -20,7 +20,7 @@ const FAQ = () => {
     },
     {
       question: 'How do you ensure accessibility?',
-      answer: 'Our team is specially trained in adaptive techniques and inclusive care practices. We accommodate various accessibility needs and work with you to ensure a comfortable, dignified experience tailored to your unique requirements.'
+      answer: 'Our team is experienced in adaptive techniques and inclusive care practices. We accommodate various accessibility needs and work with you to ensure a comfortable, dignified experience tailored to your unique requirements.'
     },
     {
       question: 'What areas do you service?',
@@ -36,7 +36,7 @@ const FAQ = () => {
     },
     {
       question: 'What services do you offer?',
-      answer: 'We offer a comprehensive range of mobile hair and beauty services including haircuts, styling, makeup, nail care, and specialized treatments, all tailored to meet the unique needs of NDIS participants.'
+      answer: 'We offer a comprehensive range of mobile hair and beauty services including haircuts, styling, makeup, nail care, and specialized treatments, all tailored to meet the unique needs of NDIS participants, those from young to old, and all genders and identities.'
     }
   ];
 
@@ -68,7 +68,7 @@ const FAQ = () => {
           {/* Small flower icon with text */}
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-pink-400 text-3xl">🌸</span>
-            <span className="text-[#5fb5b9] font-aulletta text-xl md:text-2xl italic">faq</span>
+            <span className="text-[#5fb5b9] font-aulletta text-xl md:text-2xl italic">FAQ</span>
           </div>
 
           {/* Main Heading */}

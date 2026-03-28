@@ -13,30 +13,30 @@ const Services = () => {
         id: 1,
         title: 'Hair Trims and Cuts',
         description: 'Precision haircuts customized to your style and needs, including adaptive techniques for accessibility.',
-        image: '/images/services/1.png'
+        image: '/images/services/1.jpg'
       },
       {
         id: 2,
         title: 'Hair Styling and Blow Waves',
         description: 'From sleek blow-dries to glamorous curls, perfect for everyday or special occasions.',
-        image: '/images/services/2.png'
+        image: '/images/services/2new.png'
       },
       {
         id: 3,
         title: 'Nanoplasty Hair Treatment',
         description: 'Long-lasting, frizz-free shine with gentle, natural nanotech hair treatment.',
-        image: '/images/services/3.png'
+        image: '/images/services/3new.png'
       },
       {
         id: 4,
         title: 'Haircuts for Men and Women',
         description: 'Gender-inclusive, precision haircuts tailored to your style and accessibility needs.',
-        image: '/images/services/4.png' 
+        image: '/images/services/4new.png' 
       },
       {
         id: 5,
         title: 'Curly Hair Care/Cuts',
-        description: 'Specialized cuts and care for curly and textured hair, celebrating your natural beauty.',
+        description: 'Gentle massage based and relaxing hair wash with styling to get you feeling refreshed. ',
         image: '/images/services/5.png'
       },
       {
@@ -53,10 +53,10 @@ const Services = () => {
       },
       {
         id: 8,
-        title: 'Kids\' Haircuts',
-        description: 'Fun, stress-free haircuts for children with disabilities, ensuring a positive experience.',
-        image: '/images/services/8.png'
-      }
+        title: 'Sensory-Friendly Sessions',
+        description: 'Low-stimulation sessions for those with sensory sensitivities.',
+        image: '/images/services/11.png'
+      },
     ],
     makeup: [
       {
@@ -67,31 +67,11 @@ const Services = () => {
       },
       {
         id: 2,
-        title: 'Kids\' Hair and Makeup Parties',
+        title: 'Kids Hair and Makeup parties',
         description: 'Fun, inclusive beauty parties for children, perfect for birthdays or special events.',
         image: '/images/services/10.png'
       }
     ],
-    additional: [
-      {
-        id: 1,
-        title: 'Sensory-Friendly Sessions',
-        description: 'Low-stimulation appointments with minimal noise.',
-        image: '/images/services/11.png'
-      },
-      {
-        id: 2,
-        title: 'Scalp Massages and Hair Treatments',
-        description: 'Relaxing treatments to nourish hair and promote relaxation.',
-        image: '/images/services/12.png'
-      },
-      {
-        id: 3,
-        title: 'Personalized Consultations',
-        description: 'Customized beauty plans to meet your unique needs and preferences.',
-        image: '/images/services/13.png'
-      }
-    ]
   };
 
   const currentServices = services[activeTab] || [];
@@ -183,21 +163,6 @@ const Services = () => {
             }`}
           >
             Makeup Services
-          </button>
-          <button
-            onClick={() => {
-              setActiveTab('additional');
-              if (scrollContainerRef.current) {
-                scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-              }
-            }}
-            className={`px-6 md:px-8 py-3 md:py-3.5 rounded-full font-roboto-semi-condensed font-semibold text-sm md:text-base transition-all duration-300 ${
-              activeTab === 'additional'
-                ? 'bg-[#037080] text-white shadow-lg'
-                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
-            }`}
-          >
-            Additional Services
           </button>
         </div>
 
