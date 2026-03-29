@@ -43,7 +43,7 @@ const WhyChooseUs = () => {
         <div className="w-full max-w-6xl mx-auto mb-12 scroll-reveal-scale">
           <div className="overflow-hidden">
             <Image
-              src="/images/whyChooseUS.png"
+              src="/images/whyChooseUS3.png"
               alt="Why Choose Us - NDIS Beauty Collective"
               width={1464}
               height={769}
