@@ -36,7 +36,7 @@ const Services = () => {
       {
         id: 5,
         title: 'Curly Hair Care/Cuts',
-        description: 'Gentle massage based and relaxing hair wash with styling to get you feeling refreshed. ',
+        description: 'Specialised cuts and care for curly and textured hair, celebrating your natural beauty and all curl types.',
         image: '/images/services/5.png'
       },
       {
@@ -48,7 +48,7 @@ const Services = () => {
       {
         id: 7,
         title: 'Hair Washing and Blow Drying',
-        description: 'Gentle, relaxing hair washing and styling for a refreshed look.',
+        description: 'Gentle massage based and relaxing hair wash with styling to get you feeling refreshed. ',
         image: '/images/services/7.png'
       },
       {
