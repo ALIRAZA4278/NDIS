@@ -53,10 +53,10 @@ const ServicesPage = () => {
               {/* Services Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { id: 1, title: "Hair Trims and Cuts", desc: "Precision haircuts customized to your style and needs, including adaptive techniques for accessibility.", img: "/images/services/1.jpg" },
+                  { id: 1, title: "Hair Trims and Cuts", desc: "Precision haircuts customised to your styles and needs, including tailored modifications for those with sensory sensitivities.", img: "/images/services/1.jpg" },
                   { id: 2, title: "Hair Styling and Blow Waves", desc: "From sleek blow-dries to glamorous curls, perfect for everyday or special occasions.", img: "/images/services/2new.png" },
-                  { id: 3, title: "Nanoplasty Hair Treatment", desc: "Long-lasting, frizz-free shine with gentle, natural nanotech hair treatment.", img: "/images/services/3new.png" },
-                  { id: 4, title: "Haircuts for Men and Women", desc: "Gender-inclusive, precision haircuts tailored to your style and accessibility needs.", img: "/images/services/4new.png" },
+                  { id: 3, title: "Nanoplasty Hair Treatment", desc: "Like Keratin, but less harsh and with better results, giving months of long-lasting frizz-free straight and shiny hair.", img: "/images/services/3new.png" },
+                  { id: 4, title: "Haircuts for Men and Women", desc: "Gender, age and disability inclusive haircuts with equal access and positive experiences for all", img: "/images/services/4new.png" },
                   { id: 5, title: "Curly Hair Care/Cuts", desc: "Specialised cuts and care for curly and textured hair, celebrating your natural beauty and all curl types.", img: "/images/services/5.png" },
                   { id: 6, title: "Up-Dos for Events", desc: "Elegant hairstyles for weddings, formals, or celebrations, designed with your comfort in mind.", img: "/images/services/6.png" },
                   { id: 7, title: "Hair Washing and Blow Drying", desc: "Gentle massage based and relaxing hair wash with styling to get you feeling refreshed. ", img: "/images/services/7.png" },
@@ -89,7 +89,7 @@ const ServicesPage = () => {
               {/* Services Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { id: 9, title: "Special occasion and everyday makeup", desc: "Natural or bold looks tailored to your preferences, using high-quality, skin-friendly products.", img: "/images/services/9.png" },
+                  { id: 9, title: "Special occasion and everyday makeup", desc: "Natural or bold looks tailored to your preferences, using high-quality, skin-friendly products.", img: "/images/services/9.jpeg" },
                   { id: 10, title: "Kids Hair and Makeup parties", desc: "Fun, inclusive beauty parties for children, perfect for birthdays or special events.", img: "/images/services/10.png" },
                 ].map((service, index) => (
                   <div key={service.id} className={`bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group animate-fade-in-up delay-${index * 100}`}>

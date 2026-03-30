@@ -12,7 +12,7 @@ const Services = () => {
       {
         id: 1,
         title: 'Hair Trims and Cuts',
-        description: 'Precision haircuts customized to your style and needs, including adaptive techniques for accessibility.',
+        description: 'Precision haircuts customised to your styles and needs, including tailored modifications for those with sensory sensitivities. ',
         image: '/images/services/1.jpg'
       },
       {
@@ -24,13 +24,13 @@ const Services = () => {
       {
         id: 3,
         title: 'Nanoplasty Hair Treatment',
-        description: 'Long-lasting, frizz-free shine with gentle, natural nanotech hair treatment.',
+        description: 'Like Keratin, but less harsh and with better results, giving months of long-lasting frizz-free straight and shiny hair.',
         image: '/images/services/3new.png'
       },
       {
         id: 4,
         title: 'Haircuts for Men and Women',
-        description: 'Gender-inclusive, precision haircuts tailored to your style and accessibility needs.',
+        description: 'Gender, age and disability inclusive haircuts with equal access and positive experiences for all.',
         image: '/images/services/4new.png' 
       },
       {
@@ -61,9 +61,9 @@ const Services = () => {
     makeup: [
       {
         id: 1,
-        title: 'Everyday and Special Occasion Makeup',
+        title: 'Special occasion and everyday makeup',
         description: 'Natural or bold looks tailored to your preferences, using high-quality, skin-friendly products.',
-        image: '/images/services/9.png'
+        image: '/images/services/9.jpeg'
       },
       {
         id: 2,

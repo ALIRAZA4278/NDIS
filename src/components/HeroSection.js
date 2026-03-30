@@ -19,7 +19,7 @@ const HeroSection = () => {
     'Curly Hair Care/Cuts',
     'Up-Dos for Events',
     'Hair Washing and Blow Drying',
-    'Everyday and Special Occasion Makeup',
+    'Special occasion and everyday makeup',
     'Kids\' Hair and Makeup Parties',
     'Sensory-Friendly Sessions',
     'Scalp Massages and Hair Treatments',

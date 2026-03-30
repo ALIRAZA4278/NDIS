@@ -8,7 +8,7 @@ const StatsCounter = () => {
 
   const finalValues = {
     experience: 15,
-    clients: 20000,
+    clients: 20,
     centers: 100
   };
 
@@ -103,27 +103,27 @@ const StatsCounter = () => {
                 {counts.experience}+
               </h3>
               <p className="text-white text-sm md:text-base font-roboto-semi-condensed uppercase tracking-widest">
-                YEAR EXPERIENCE
+                years experience
               </p>
             </div>
 
-            {/* Happy Clients */}
+            {/* Suburbs Served */}
             <div className="text-center md:border-r border-white/30 animate-scale-in delay-200">
               <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 font-recoleta">
-                {formatNumber(counts.clients)}+
+                {counts.clients}+
               </h3>
               <p className="text-white text-sm md:text-base font-roboto-semi-condensed uppercase tracking-widest">
-                HAPPY CLIENTS
+                suburbs served
               </p>
             </div>
 
-            {/* Trusted Centers */}
+            {/* Happy Smiles */}
             <div className="text-center animate-scale-in delay-400">
               <h3 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-2 font-recoleta">
                 {counts.centers}+
               </h3>
               <p className="text-white text-sm md:text-base font-roboto-semi-condensed uppercase tracking-widest">
-                TRUSTED CENTER
+                HAPPY SMILES
               </p>
             </div>
           </div>
