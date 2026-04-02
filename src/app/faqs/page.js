@@ -78,7 +78,7 @@ const FaqsPage = () => {
             <div className="text-center mb-12">
               <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in-down">
                 <span className="text-pink-400 text-3xl hover:scale-125 hover:rotate-12 transition-transform duration-300">🌸</span>
-                <span className="text-[#5fb5b9] text-xl md:text-2xl italic font-aulletta">faq</span>
+                <span className="text-[#5fb5b9] text-xl md:text-2xl italic font-aulletta">FAQ</span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-recoleta text-gray-800 mb-4 animate-fade-in-up delay-100">
                 Frequently Asked Questions

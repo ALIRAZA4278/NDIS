@@ -108,7 +108,7 @@ const ContactPage = () => {
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-pink-400 text-2xl hover:scale-125 hover:rotate-12 transition-transform duration-300">🌸</span>
-                  <span className="text-[#5fb5b9] text-xl italic font-aulletta">Send Us A Message</span>
+                  <span className="text-[#5fb5b9] text-xl italic font-aulletta">SEND US A MESSAGE</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-recoleta text-gray-800 mb-4">
                   Get In Touch

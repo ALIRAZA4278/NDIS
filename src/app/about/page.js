@@ -88,7 +88,7 @@ const about = () => {
         <section className="py-16 px-6 md:px-12 lg:px-24">
           <div className="max-w-7xl mx-auto">
             {/* Image */}
-            <div className="w-full mb-8 overflow-hidden rounded-lg shadow-2xl scroll-reveal-scale">
+            <div className="max-w-4xl mx-auto mb-8 overflow-hidden rounded-lg shadow-2xl scroll-reveal-scale">
               <Image
                 src="/images/about/1.png"
                 alt="NDIS Beauty Collective Mission"

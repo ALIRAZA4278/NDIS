@@ -52,7 +52,7 @@ const Feedback = () => {
           {/* Small flower icon with text */}
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="text-pink-400 text-3xl">🌸</span>
-            <span className="text-[#5fb5b9] font-aulletta text-xl md:text-2xl italic">Get In Touch</span>
+            <span className="text-[#5fb5b9] font-aulletta text-xl md:text-2xl italic">GET IN TOUCH</span>
           </div>
 
           {/* Main Heading */}

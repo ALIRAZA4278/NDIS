@@ -38,7 +38,7 @@ const AboutUs = () => {
           {/* Small flower icon with text */}
           <div className="flex items-center justify-center gap-2 mb-4 animate-fade-in-down">
             <span className="text-pink-400 text-3xl hover:scale-125 hover:rotate-12 transition-transform duration-300">🌸</span>
-            <span className="text-[#037080] font-aulletta text-xl md:text-2xl italic">About Us</span>
+            <span className="text-[#037080] font-aulletta text-xl md:text-2xl italic">ABOUT US</span>
           </div>
 
           {/* Main Heading */}
