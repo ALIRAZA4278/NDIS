@@ -36,10 +36,10 @@ const Navbar = () => {
 
             {/* Right Side - Social Icons with full height background */}
             <div className="flex items-center gap-4 bg-[#037080] px-8 h-full ml-auto">
-              <a href="#" className="text-white hover:text-gray-200 transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/NDISBeautyCollective" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors" aria-label="Facebook">
                 <FaFacebookF className="text-sm" />
               </a>
-              <a href="#" className="text-white hover:text-gray-200 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/ndisbeautycollective/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors" aria-label="Instagram">
                 <FaInstagram className="text-sm" />
               </a>
               <a href="#" className="text-white hover:text-gray-200 transition-colors" aria-label="Twitter">
@@ -207,10 +207,10 @@ const Navbar = () => {
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 justify-center pt-4 border-t border-gray-200">
-              <a href="#" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/NDISBeautyCollective" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Facebook">
                 <FaFacebookF className="text-sm" />
               </a>
-              <a href="#" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/ndisbeautycollective/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Instagram">
                 <FaInstagram className="text-sm" />
               </a>
               <a href="#" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Twitter">

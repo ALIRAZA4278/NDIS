@@ -196,7 +196,7 @@ const Footer = () => {
               {instagramImages.map((img, index) => (
                 <a
                   key={index}
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/ndisbeautycollective/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="aspect-square rounded-lg overflow-hidden hover:opacity-80 transition-opacity cursor-pointer"
@@ -226,10 +226,10 @@ const Footer = () => {
 
             {/* Social Media Links */}
             <div className="flex items-center gap-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
+              <a href="https://www.facebook.com/NDISBeautyCollective" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
                 <FaFacebookF className="text-base" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
+              <a href="https://www.instagram.com/ndisbeautycollective/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
                 <FaInstagram className="text-base" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
