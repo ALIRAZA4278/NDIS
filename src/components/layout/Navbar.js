@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaTwitter, FaPinterestP, FaLinkedinIn, FaTimes, FaBars } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaTimes, FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,15 +41,6 @@ const Navbar = () => {
               </a>
               <a href="https://www.instagram.com/ndisbeautycollective/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors" aria-label="Instagram">
                 <FaInstagram className="text-sm" />
-              </a>
-              <a href="#" className="text-white hover:text-gray-200 transition-colors" aria-label="Twitter">
-                <FaTwitter className="text-sm" />
-              </a>
-              <a href="#" className="text-white hover:text-gray-200 transition-colors" aria-label="Pinterest">
-                <FaPinterestP className="text-sm" />
-              </a>
-              <a href="#" className="text-white hover:text-gray-200 transition-colors" aria-label="LinkedIn">
-                <FaLinkedinIn className="text-sm" />
               </a>
             </div>
           </div>
@@ -212,15 +203,6 @@ const Navbar = () => {
               </a>
               <a href="https://www.instagram.com/ndisbeautycollective/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Instagram">
                 <FaInstagram className="text-sm" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Twitter">
-                <FaTwitter className="text-sm" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="Pinterest">
-                <FaPinterestP className="text-sm" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-[#037080] rounded-full flex items-center justify-center text-white hover:bg-[#3d4450] transition-colors" aria-label="LinkedIn">
-                <FaLinkedinIn className="text-sm" />
               </a>
             </div>
 

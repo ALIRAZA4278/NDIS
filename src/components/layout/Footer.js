@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaTwitter, FaPinterestP, FaLinkedinIn, FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaFacebookF, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from 'react-icons/fa';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -231,15 +230,6 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/ndisbeautycollective/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
                 <FaInstagram className="text-base" />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
-                <FaXTwitter className="text-base" />
-              </a>
-              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
-                <FaPinterestP className="text-base" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#5fb5b9] transition-colors">
-                <FaLinkedinIn className="text-base" />
               </a>
             </div>
           </div>
