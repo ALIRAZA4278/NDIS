@@ -220,7 +220,16 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Copyright */}
             <p className="text-gray-300 font-roboto-semi-condensed text-sm text-center md:text-left">
-              Copyright © 2025 NDIS Beauty Collective. All rights reserved.
+              Copyright © 2025 NDIS Beauty Collective | Designed &amp; Developed by{' '}
+              <a
+                href="https://aussiedesignsolutions.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline hover:text-white transition-colors"
+              >
+                Aussie Design Solutions
+              </a>{' '}
+              | All rights reserved.
             </p>
 
             {/* Social Media Links */}

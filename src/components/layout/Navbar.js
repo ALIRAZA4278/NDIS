@@ -53,13 +53,15 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-[80px] md:h-[100px]">
             {/* Logo - positioned to overlap both sections */}
             <div className="absolute left-4 md:left-16 top-1 md:top-2 z-20">
-              <div className="w-[60px] h-[60px] md:w-[150px] md:h-[150px] rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden border-2 md:border-4 border-white">
-                <img
-                  src="/images/image.png"
-                  alt="NDIS Beauty Collective"
-                  className="w-full h-full object-contain p-1 md:p-3"
-                />
-              </div>
+              <Link href="/" aria-label="Go to home page" className="block w-[60px] h-[60px] md:w-[150px] md:h-[150px]">
+                <div className="w-full h-full rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden border-2 md:border-4 border-white">
+                  <img
+                    src="/images/image.png"
+                    alt="NDIS Beauty Collective"
+                    className="w-full h-full object-contain p-1 md:p-3"
+                  />
+                </div>
+              </Link>
             </div>
 
             {/* Spacer for logo */}
